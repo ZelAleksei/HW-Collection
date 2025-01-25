@@ -18,18 +18,25 @@ public class Main {
         swap.swap(testHM);
 
         RandomList rl = new RandomList();
-        int sizeList = 10000000;
+        int sizeList = 1_000_000;
         ArrayList array = rl.createRandomAL(sizeList);
         LinkedList linked = rl.createRandomLL(sizeList);
-        int index = 65000;
+        Random rm = new Random();
+
 
         long startTime = System.nanoTime();
-        System.out.println("Элемент ArrayList с индексом " + index + " -> " + array.get(index));
+        for (int i = 0; i < 1000; i++) {
+            int index = rm.nextInt(1_000_000);
+            array.get(index);
+        }
         long endTime = System.nanoTime();
-        System.out.println("Время обращения к элементу ArrayList = " + (endTime-startTime/1000000000.0 + " секунд"));
+        System.out.println("\nВремя обращения к элементу ArrayList = " + (endTime-startTime/1000000000.0 + " секунд"));
 
         startTime = System.nanoTime();
-        System.out.println("Элемент LinkedList с индексом " + index + " -> " + linked.get(index));
+        for (int i = 0; i < 1000 ; i++) {
+            int index = rm.nextInt(1_000_000);
+            linked.get(index);
+        }
         endTime = System.nanoTime();
         System.out.println("Время обращения к элементу LinkedList = " + (endTime-startTime/1000000000.0 + " секунд"));
 
@@ -42,8 +49,8 @@ public class Main {
         arrayListString.add("Пинокио");
         arrayListString.add("Колобок");
 
-        System.out.println("Изначальный ArrayList -> " + arrayListString);
+        System.out.println("\nИзначальный ArrayList -> " + arrayListString);
         HashSet hashSet = new HashSet<>(arrayListString);
-        System.out.println("Изначальный ArrayList -> " + hashSet);
+        System.out.println("Без дубликтов -> " + hashSet);
     }
 }

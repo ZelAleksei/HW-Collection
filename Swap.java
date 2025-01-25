@@ -9,6 +9,7 @@ public class Swap {
 
     public static void swap(HashMap<Integer, String> testHM) {
         HashMap resultHM = new HashMap();
+
         List<Integer> key = new ArrayList<>(testHM.keySet());
         List<String> value = new ArrayList<>(testHM.values());
 
@@ -16,9 +17,6 @@ public class Swap {
             resultHM.put(value.get(i), key.get(i));
         }
         System.out.println(resultHM);
-
-        ArrayList alist = new ArrayList<>();
-        LinkedList llist = new LinkedList<>();
     }
 }
 
