@@ -19,12 +19,12 @@ public class Main {
 
         RandomList rl = new RandomList();
         int sizeList = 10000000;
-        ArrayList arrey = rl.createRandomAL(sizeList);
+        ArrayList array = rl.createRandomAL(sizeList);
         LinkedList linked = rl.createRandomLL(sizeList);
         int index = 65000;
 
         long startTime = System.nanoTime();
-        System.out.println("Элемент ArrayList с индексом " + index + " -> " + arrey.get(index));
+        System.out.println("Элемент ArrayList с индексом " + index + " -> " + array.get(index));
         long endTime = System.nanoTime();
         System.out.println("Время обращения к элементу ArrayList = " + (endTime-startTime/1000000000.0 + " секунд"));
 
