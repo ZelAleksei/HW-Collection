@@ -5,7 +5,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        HashMap<Integer, String> testHM = new HashMap();
+        HashMap<Integer, String> testHM = new HashMap<>();
         testHM.put(1, "Булгаков");
         testHM.put(2, "Гоголь");
         testHM.put(4, "Железняк");
@@ -19,8 +19,8 @@ public class Main {
 
         RandomList rl = new RandomList();
         int sizeList = 1_000_000;
-        ArrayList array = rl.createRandomAL(sizeList);
-        LinkedList linked = rl.createRandomLL(sizeList);
+        ArrayList<Integer> array = rl.createRandomAL(sizeList);
+        LinkedList<Integer> linked = rl.createRandomLL(sizeList);
         Random rm = new Random();
 
 
@@ -50,7 +50,7 @@ public class Main {
         arrayListString.add("Колобок");
 
         System.out.println("\nИзначальный ArrayList -> " + arrayListString);
-        HashSet hashSet = new HashSet<>(arrayListString);
+        HashSet<String> hashSet = new HashSet<>(arrayListString);
         System.out.println("Без дубликтов -> " + hashSet);
     }
 }
