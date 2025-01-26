@@ -8,13 +8,13 @@ import java.util.List;
 public class Swap {
 
     public static void swap(HashMap<Integer, String> testHM) {
-        HashMap resultHM = new HashMap();
+        HashMap<String, Integer> resultHM = new HashMap();
 
-        List<Integer> key = new ArrayList<>(testHM.keySet());
-        List<String> value = new ArrayList<>(testHM.values());
+        List<Integer> keys = new ArrayList<>(testHM.keySet());
+        List<String> values = new ArrayList<>(testHM.values());
 
-        for (int i = 0; i < key.size(); i++) {
-            resultHM.put(value.get(i), key.get(i));
+        for (int i = 0; i < keys.size(); i++) {
+            resultHM.put(values.get(i), keys.get(i));
         }
         System.out.println(resultHM);
     }

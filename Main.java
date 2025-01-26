@@ -5,7 +5,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        HashMap testHM = new HashMap();
+        HashMap<Integer, String> testHM = new HashMap();
         testHM.put(1, "Булгаков");
         testHM.put(2, "Гоголь");
         testHM.put(4, "Железняк");
@@ -30,7 +30,7 @@ public class Main {
             array.get(index);
         }
         long endTime = System.nanoTime();
-        System.out.println("\nВремя обращения к элементу ArrayList = " + (endTime-startTime/1000000000.0 + " секунд"));
+        System.out.println("\nВремя обращения к элементу ArrayList = " + ((endTime-startTime)/1000000000.0) + " секунд");
 
         startTime = System.nanoTime();
         for (int i = 0; i < 1000 ; i++) {
@@ -38,7 +38,7 @@ public class Main {
             linked.get(index);
         }
         endTime = System.nanoTime();
-        System.out.println("Время обращения к элементу LinkedList = " + (endTime-startTime/1000000000.0 + " секунд"));
+        System.out.println("Время обращения к элементу LinkedList = " + ((endTime-startTime)/1000000000.0) + " секунд");
 
         ArrayList<String> arrayListString = new ArrayList<>();
         arrayListString.add("Колобок");
